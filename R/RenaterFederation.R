@@ -31,8 +31,8 @@ RenaterFederation <-  R6Class("RenaterFederation",
 	#'@return an object of class \link{list} or \link{data.frame}
 	getIdentityProviders = function(pretty = FALSE){
 		idps = jsonlite::read_json(sprintf("https://discovery.renater.fr/%s/api.php/idps", self$id))[[1]]
-		if(pretty) idps = do.call("rbind.fill", lapply(1:length(discovery$children), function(i){
-		  as.data.frame(t(unlist(discovery$children[[i]])))
+		if(pretty) idps = do.call("rbind.fill", lapply(1:length(idps$children), function(i){
+		  as.data.frame(t(unlist(idps$children[[i]])))
 		}))
 		return(idps)
 	}
