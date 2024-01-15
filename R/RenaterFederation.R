@@ -22,7 +22,7 @@ RenaterFederation <-  R6Class("RenaterFederation",
     #'@param logger logger
     initialize = function(id = c("renater", "edugain", "test"), logger = NULL){
       super$initialize(logger = logger)
-	  id <- match.arg(id)
+	    id <- match.arg(id)
       self$id = id
     },
 
