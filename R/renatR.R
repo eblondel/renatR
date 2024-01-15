@@ -8,6 +8,7 @@
 #' @import jsonlite
 #' @import XML
 #' @import httr
+#' @import plyr
 #'
 #' @title Tools to connect to Renater
 #' @description Provides tools to connect to the Renater federation.
